@@ -1,0 +1,18 @@
+﻿Readability Code Review
+
+Reviewer: Zach Atwood
+Review Date: 3/17/2014
+Sprint: Sprint 4
+Reviewed File: MarioCamera.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 15
+
+What is readable:
+
+	- Variables are all well named to increase code clarity
+
+
+What is not readable: 
+
+	- The camera logic could be a little clearer or more commented to provide some clarity
+	- Nested if may be necessary but makes the code a little convoluted

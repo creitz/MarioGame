@@ -1,0 +1,24 @@
+﻿
+Readability Code Review
+
+Reviewer: Charles Reitz
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: PowerupSpawner.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 10
+
+What is readable:
+
+	-Intent of constructor is pretty readable/clear as far as what it should be accomplishing, except
+	a frequency is passed to it and then multiplied by PowerupSpawnerConfig.SpawnFrequencyMultiplier.  
+	-Update() and SpawnItem() are very clear.  Although SpawnItem() could be reduced to one line of code
+	by calling CreateSpawnItem() in .Add(), it is very readable this way.  
+	-CreateSpawnItem might be a little more readable if there was a default case instead of assigning spawnItem
+	otuside of the switch, then letting none of them be the case.  
+
+
+What is not readable: 
+
+	-Nothing, pretty good. 
+	

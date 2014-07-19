@@ -1,0 +1,18 @@
+﻿Code Quality Review
+
+Reviewer: Zach Atwood
+Review Date: 4/7/2014
+Sprint: Sprint 5
+Reviewed File: LivesScreen.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		High coupling, low cohesion. The class only needs to know about level.
+		
+	Hypothetical Change:
+		The code is very clear and does exactly what it needs to do. Some additional efforts could be
+		made to fix formatting.
+		

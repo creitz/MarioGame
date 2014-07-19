@@ -1,0 +1,11 @@
+﻿
+Sprint 5
+
+Changes not made to code that were suggested by running code analysis:
+
+	1)  For FireFlowerCollisionResponder it suggested to remove the
+		"side" paramter to the method call of RespondToCollision().  This was 
+		not done because having those parameters allows that method to be called from 
+		CollisionDetector on objects of type IObject, as this object implements this
+		method from the interface.  In order to implement the IObject interface, it 
+		must have a method with this signature.  

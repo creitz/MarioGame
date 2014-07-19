@@ -1,0 +1,25 @@
+﻿Code Quality Review
+
+Reviewer: Zach Atwood
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: Keybinder.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling:
+		High Cohesion: as this class could be easily ported to any other menu system and still work properly
+
+		Low Coupling: The class needs to know nothing about the game.
+		
+	Cyclomatic Complexity: High cyclomatic compelexity, which is expected since the class does a
+		lot of raw transformations of data. Given the fact that there are a specific number of letters
+		it must handle the complexity will be higher.
+		 
+
+	Hypothetical Change:
+
+		It would be possible to set this up more as a utility/static class which can just be invoked to change a keybind.
+		

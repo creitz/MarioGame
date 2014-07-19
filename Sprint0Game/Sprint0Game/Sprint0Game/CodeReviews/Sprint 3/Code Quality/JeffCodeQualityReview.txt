@@ -1,0 +1,31 @@
+﻿
+Code Quality Review
+
+Reviewer: Jeff Huggins
+Review Date: 2/27/2014
+Sprint: Sprint 3
+Reviewed File:  CollisionDetector.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion:
+		-Very high cohesion, every method that exists in this class belongs there and anything
+		 that can be shipped out to another class has done so.
+	
+	Coupling:
+		-Relatively low coupling.  Mostly independent of other classes. References Level,
+		 Geometry.side enum, and IObject. However IObject has dozens of subclasses so
+		 CollisionDetector.cs is very dependent on the performance of those classes.
+
+	Cyclomatic Complexity:
+		-Cyclomatic complexity is not too bad. Contains 2 sets of nested "for" loops. Also has
+		 an "if-else" statement nested in each branch of another "if-else" statement. This case
+		 occurs in GetCollisionSides() which has 4 possible execution paths. 
+
+	Hypothetical Change:
+		-In the case of Mario jumping on the turtle shell... The shell should shoot off to the right
+		 if Mario jumps on the top-left of it, and it should shoot off to the left if Mario jumps
+		 on the top-right of it. As this class currently stands, this top-left/top-right collision
+		 cannot be detected.

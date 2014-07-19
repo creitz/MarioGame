@@ -1,0 +1,29 @@
+Code Quality Review
+
+Reviewer: Travis McDaniel
+Review Date: 2/28/2014
+Sprint: Sprint 3
+Reviewed File:  LevelCreator.cs
+Author of file: Zach Atwood
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion:
+		-High cohesion, everything inside LevelCreator makes sense to be there.
+	
+	Coupling:
+		-Very low coupling. LevelCreator is only bound to a level object which makes sense because 
+		 it's purpose is to fill in a level.
+
+	Cyclomatic Complexity:
+		-At first glance, the GenerateLevel method looks very complex with a large amount of nesting due to 
+		 the try-catch statements; however, the actual cyclomatic complexity isn't as bad as it would appear. 
+ 		 The while loop within GenerateLevel will often call CreateObjects which uses a foreach loop to create
+		 the objects within the level. This gives us a worst case cylomatic complexity of 2 loops, which
+		 unfortunately would not be easy to improve (one loop for each line and another for each object in that line).
+	
+	Hypothetical Change:
+		-One change I would make would be to put the case select logic into it's own method just to make the flow of
+		 CreateObjects a little more apparent, rather than a large switch statement. Call it something like 
+		 AddObject(s) and it becomes much clearer how the logic within CreateObjects actually flows.

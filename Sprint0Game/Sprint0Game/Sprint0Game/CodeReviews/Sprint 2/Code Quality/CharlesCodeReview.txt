@@ -1,0 +1,30 @@
+﻿
+Code Quality Review
+
+Reviewer: Charles Reitz
+Review Date: 2/6/2014
+Sprint: Sprint 2
+Reviewed File:  Koopa.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 25
+
+Review:
+
+	Cohesion & Coupling:
+		-Very high cohesion, fairly low coupling.  Mostly independent of other classes except
+		that draw() depends on spritebatch.begin() being called before draw(), otherwise spritebatch.draw() 
+		will not work...should not change, though...good for the project as a whole.  Also dependent on 
+		centralized SpriteHolder.  
+
+	Cyclomatic Complexity:
+		-Low cyclomatic complexity: no nesting of conditional logic (only 1 tier of if statements, though 
+		two consecutive ones).  4 possible execution paths in Update(), 1 possible path in constructor and
+		draw().
+
+	Hypothetical Change:
+		-If a different spritesheet was used, this would easily be changed since the number of columns/frames
+		is retrieved from a single source (SpriteHolder), and dimensions are determined dynamically.
+		
+		-If the speed at which koopa walks was changed, an additional parameter (or similar method) would 
+		be needed to alter the rate of frame change.  In addition, there is no logic for moving koopa's 
+		location as he actually walks.	

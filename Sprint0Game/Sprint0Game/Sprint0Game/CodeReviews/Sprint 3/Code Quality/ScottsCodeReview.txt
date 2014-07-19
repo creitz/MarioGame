@@ -1,0 +1,26 @@
+﻿
+Code Quality Review
+
+Reviewer: Scott Ervin
+Review Date: 2/7/2014
+Sprint: Sprint 2
+Reviewed File:  CoinCollisionResponder.cs
+Author of file: Jeff
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		-Very high cohesion, very low coupling.  Independent of other classes except
+		for needing to know about the object class which is needed.  Their are no public variables declaired 
+
+	Cyclomatic Complexity:
+		-Low cyclomatic complexity: no nesting of conditional logic (only 1 tier of if statements).  1 possible 
+		execution path in constructor and in RespondToCollisionWithMario(), 2 possible paths in RespondToCollision.
+
+	Hypothetical Change:
+		-If coins were to be collected by enemies as well.  This would be an easy change to just add an if 
+		statement and a method
+		
+		-If you wanted to make the coin only collected by mario.  Also an easy change by just adding a condition.  
+		You would have to cast mario though in order to access if he is big or not.  This issue is not really due to this class though. 	

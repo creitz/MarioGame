@@ -1,0 +1,14 @@
+﻿
+Scott Ervin
+02/03/14
+Sprint 2
+ItemCoin.cs
+Jeff
+It took 10 minutes to complete this review
+
+The organization of the methods made them very short and to the point, which helped with readability.  
+The names of the methods and parameters were also very descriptive which was helpful in understanding 
+the goal of each method.  It may help with readability if all the public variables were listed in a row 
+rather than mixing them in the private variables as well.  One last thing that not very readable to 
+someone that didn’t understand the code was the variable names coinRows and coinColumns.  It may help 
+to change those to coinSpriteRows and coinSpriteColumns so they are a bit more descriptive.

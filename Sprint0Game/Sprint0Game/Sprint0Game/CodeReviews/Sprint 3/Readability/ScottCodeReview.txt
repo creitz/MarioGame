@@ -1,0 +1,12 @@
+﻿
+Scott Ervin
+02/03/14
+Sprint 2
+CoinCollisionResponder.cs
+Jeff
+It took 10 minutes to complete this review
+
+The seperation and spacing of the methods was very good.  The only private variable declaired was placed well within the code.
+The if conditions were very clear and method naming was very cohesive to the goal of each method.  One thing that could have better
+naming in order to make it more clear is Coin.Sprite.dead.  I would suggest renaming it to maybe Collected.  It should also be 
+capitalized since it is the name of a method.

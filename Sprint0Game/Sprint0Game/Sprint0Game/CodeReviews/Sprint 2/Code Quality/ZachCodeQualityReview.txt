@@ -1,0 +1,33 @@
+﻿
+Code Quality Review
+
+Reviewer: Zach Atwood
+Review Date: 2/7/2014
+Sprint: Sprint 2
+Reviewed File:  KeyboardController.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 20
+
+Review:
+
+Cohesion and Coupling:
+
+	Medium coupling in the controller which is somewhat expected since the keyboard controller
+	passes around a lot of different objects based on input. The coupling is lowered significantly
+	through the use of commands. The cohesion is high as well since the class mainly serves to pass 
+	around objects based on input and does this without changing the objects.
+
+Cyclomatic Complexity:
+	
+	The code has relatively low cyclomatic complexity since it only contains the for loop to check
+	all the keys. There are some if/else loops within the code which may be unneccesary but they 
+	do not necessarily over complexify the code.
+
+Hypothetical Change:
+
+	It could be beneficial to rework the if/else statement which controls the update delay in order to 
+	simplify the cyclomatic complexity of the code. 
+
+	Also, the for loop could probably be replaced with a foreach to enumerate through the keys
+
+

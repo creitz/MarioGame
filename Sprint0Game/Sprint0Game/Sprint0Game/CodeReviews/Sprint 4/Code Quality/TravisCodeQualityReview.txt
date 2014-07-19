@@ -1,0 +1,23 @@
+Code Quality Review
+
+Reviwer: Travis McDaniel
+Review Date: 3/21/14
+Sprint: Sprint 4
+Reviewed File: QuestionBlock.cs
+Author of File: Zach Atwood
+Minutes to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		- Very high cohesion and low coupling. Not reliant on another major class to function.
+
+	Cyclomatic Complexity:
+		-None. There are no loops within the QuestionBlock class.
+	
+	Hypothetical Change:
+		-If, in a later level, you wanted to have blocks that move and aren't just stationary, 
+		 modifying this block type would be as simple as adding a property to declare whether the
+		 block needs to move or not (boolean) and then adding logic to update CurrentPosition based
+	 	 on that boolean flag. The overall code is very compact, simple and does exactly what it needs
+		 to and no more making modification for most any block function easy.

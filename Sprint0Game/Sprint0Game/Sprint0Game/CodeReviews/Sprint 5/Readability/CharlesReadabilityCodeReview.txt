@@ -1,0 +1,24 @@
+﻿
+Readability Code Review
+
+Reviewer: Charles Reitz
+Review Date: 4/1/2014
+Sprint: Sprint 5
+Reviewed File: Flag.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 15
+
+What is readable:
+
+	-Intent of constructor is pretty readable/clear as far as what it should be accomplishing.  
+	-Draw, RespondToCollision, and RespondToNoCollision are very clear
+	-Update method is pretty clear (though maybe it would be more readable to have the code inside the 
+		if statement handled by the sprite, probably in a method)
+
+
+What is not readable: 
+
+	-In constructor, somewhat unclear why HasBeenReached is being set to true. 
+	-CurrentPosition's initialization in the constructor is a little difficult to decipher
+	-Lots of fields
+	

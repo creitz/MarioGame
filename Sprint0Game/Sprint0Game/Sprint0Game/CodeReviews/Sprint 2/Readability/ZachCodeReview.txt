@@ -1,0 +1,20 @@
+﻿Readability Code Review
+
+Reviewer: Zach Atwood
+Review Date: 2/3/2014
+Sprint: Sprint 2
+Reviewed File:  KeyboardController.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 20
+
+What is readable:
+	
+	- Good use of comments to describe code progression
+	- Variables are well named to give insight into what the code is doing
+
+What is not readable: 
+
+	- The depth of the nested loops is 3, which could probably be reworked to decrease it.
+	- Doesn't need a Microsoft.Xna.Framework.Input as the class has a using statement for it.
+	- Could make better use of comments in the constructor to block out what each command pertains to.
+	- May be able to use a foreach to iterate through pressed keys, making the code a bit more readable.

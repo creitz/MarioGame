@@ -1,0 +1,22 @@
+﻿
+Readability Code Review
+
+Reviewer: Jeff Huggins
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: MenuKeyboardController.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 15
+
+What is readable:
+
+	- Everything in the constructor is very clear.
+	- Variable naming conventions are pretty good, structure of this class resembles other keyboard classes which is great.
+	- Methods are short and clear regarding their purpose.
+	- Commenting is quite helpful in this situation.
+
+
+What is not readable: 
+
+	- Maybe a little confusing regarding the different purposes of the two dictionaries.
+	

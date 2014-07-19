@@ -1,0 +1,26 @@
+﻿
+Code Quality Review
+
+Reviewer: Scott
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: FlyingKoopa.cs
+Author of file: Jeff
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		-Very high cohesion.  All logic has to do with flying koopa and that alone.  
+		-Low coupling overall.  A little coupling with its collision responder and its sprite but that is to be expected   
+
+	Cyclomatic Complexity:
+		-Extremely low cyclomatic complexity.  One or two executable paths in each method.  Nice work here.  
+
+	Other Comments:
+		-Don't really need to tell flying koopa to go right of left in constructor.  Really could just do this in update.
+
+
+	Hypothetical Change:
+		-If you would want to make a koopa when hit from a fireball as well this would be a simple change due to the bool
+		field you created.  Nice simple code makes this change easy.

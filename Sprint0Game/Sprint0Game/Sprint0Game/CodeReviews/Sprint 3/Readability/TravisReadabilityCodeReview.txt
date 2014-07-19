@@ -1,0 +1,21 @@
+Readability Code Review
+
+Reviewer: Travis McDaniel	
+Review Date: 2/16/2014
+Sprint: Sprint 3
+Reviewed File:  LevelCreator.cs
+Author of file: Zach Atwood
+Number of Mins to Review: 15
+
+What is readable:
+	
+	- Spacing between chunks of code makes it easier to read and understand related code
+	- The method CreateObjects has a very easy to follow writing, with the case select cases being concise but easy to understand.
+	- Good commenting throughout the file
+
+What is not readable: 
+
+	- GenerateLevel is rather complex and has several nested blocks of code that can be difficult to follow. 
+		Some meaningful comments at the beginning of the block might help in understanding what's going on.
+	- If possible, trim out some of the nested nature of GenerateLevel
+	- Catch statement for Exception e is not filled in (possibly an issue with Get Latest Version)

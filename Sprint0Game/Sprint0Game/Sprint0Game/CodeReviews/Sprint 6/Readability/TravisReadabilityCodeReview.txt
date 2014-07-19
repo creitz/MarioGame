@@ -1,0 +1,20 @@
+Readability Code Review
+
+Reviewer: Travis McDaniel
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: LevelGenerator.cs
+Author of file: Zach Atwood
+Number of Mins to Review: 13
+
+What is readable:
+	-Methods are segmented into very organized and understandle code chunks, making large methods
+	 easier to follow.
+	-Properties are well named and their uses are very clear.
+	-Helper methods are very short and easily understood in their purpose.	
+	-Code doesn't carry any bloat and feels just as short as it is needed to be.
+
+What is not readable: 
+	-Some variables have simplistic but very limiting names such as MouseState m, or Button b.
+	 Some more meaningful names would help with understanding the larger methods in the class.
+	-Some commenting on the larger methods would make reading faster and easier.

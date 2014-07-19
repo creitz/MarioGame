@@ -1,0 +1,14 @@
+Code Quality Review
+
+Reviewer: Travis McDaniel
+Review Date: 2/7/2014
+Sprint: Sprint 2
+Reviewed File: QuestionBlockState.cs
+Author of Reviewed File: Zach Atwood
+Number of Minutes for Review: 25
+
+Cohesion & Coupling:
+-Very high amounts of Cohesion for the four methods involved, but coupling is very low. The class only depends on Spritebatch and a little bit on the SpriteHolder in order to function.
+
+Suggested Change: 
+-If the block would ever need to change with time it would be easy to fill in the update method in order to do so. A more difficult change would be to add animation to the sprite (like making the block flash) because there is no logic support for multiple frames in the sprite sheet or going through with an animation loop.

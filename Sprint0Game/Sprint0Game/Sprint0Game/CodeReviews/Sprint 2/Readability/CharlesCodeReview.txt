@@ -1,0 +1,29 @@
+﻿
+Readability Code Review
+
+Reviewer: Charles Reitz
+Review Date: 2/1/2014
+Sprint: Sprint 2
+Reviewed File:  Koopa.cs
+Author of file: Scott Ervin
+Number of Mins to Review:  15
+
+Comments:
+
+	What is Readable:
+			
+			-Spacing in Drawing Method is good...related chunks of code grouped together.
+
+	What is Not Readable:
+			
+			-Method differentiation.  With no spaces between methods, the code blurs together, and each method is thus
+				less readable
+			-Instance variable declaration.  Also needs spacing, at very least from the constructor
+			-Spacing in the constructor is absent, makes reading the constructor code more difficult
+
+
+	Suggestions:
+
+		-Add Comments--There are none...Why only increment currentframe if count is 5 in Update()?
+		-Use "this" quantifier for instance variables even though it is not required for compilation
+		-Add blank lines between methods

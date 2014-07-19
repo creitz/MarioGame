@@ -1,0 +1,22 @@
+﻿Readability Code Review
+
+Reviewer: Zach Atwood
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: Keybinder.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 15
+
+What is readable:
+
+	- Code is more readable because the method names provide clarity
+	- The variables are well named
+	- Comments are provided for extra clarity
+
+
+What is not readable: 
+	-The code is a bit long, but this may not be unavoidable
+	-Putting entire method returns on one line decrease readability, but also decrease length.
+
+	
+	

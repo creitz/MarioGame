@@ -1,0 +1,26 @@
+﻿
+Code Quality Review
+
+Reviewer: Scott Ervin
+Review Date: 2/7/2014
+Sprint: Sprint 2
+Reviewed File:  ItemCoin.cs
+Author of file: Jeff
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling:
+		-Very high cohesion, fairly low coupling.  Mostly independent of other classes except
+		that draw() depends on spritebatch.begin() being called before draw(), but that should not be changed.  Also dependent on 
+		centralized SpriteHolder which also benifits the project as a whole.  The public variable position will be needed in collision
+		detection however SpriteBatch should not be public since nothing else should need to know about it.  
+
+	Cyclomatic Complexity:
+		-Low cyclomatic complexity: no nesting of conditional logic (only 1 tier of if statements).  4 possible execution paths in Update(), 1 possible path in constructor and
+		draw().
+
+	Hypothetical Change:
+		-If the coin were to be collected there would be no way to make this change happen.
+		
+		-If you wanted to make the coin move (like when a block is bumped) there would be additional logic needed 	

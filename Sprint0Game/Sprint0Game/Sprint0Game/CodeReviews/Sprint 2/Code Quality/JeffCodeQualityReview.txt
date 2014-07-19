@@ -1,0 +1,26 @@
+﻿
+Code Quality Review
+
+Reviewer: Jeff Huggins
+Review Date: 2/6/2014
+Sprint: Sprint 2
+Reviewed File:  JumpingMario.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 25
+
+Review:
+
+	-No nesting of logic, so cyclomatic complexity is not too bad. 12 different execution paths in the
+	constructor. 8 paths in Update(). 1 path in Draw().
+
+	-Has functional cohesion. The parts of the class all contribute to the well-defined task of the class
+	which is to set the data for the Mario sprite and to draw him performing a jumping animation.
+
+	-Practically no coupling. Almost completely independant of other classes. Instead of reading data
+	from other classes, data is passed in as parameters. 
+
+Hypothetical Change:
+	
+	-A hypothetical change to the game could be to increase or decrease the height Mario could jump based
+	on level conditions or some new item intoduced. Since jumpHeight is hard-coded into the class, this
+	change would not be handled easily within the class.

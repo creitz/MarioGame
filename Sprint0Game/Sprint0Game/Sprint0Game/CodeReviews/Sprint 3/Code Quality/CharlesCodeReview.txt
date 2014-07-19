@@ -1,0 +1,31 @@
+﻿
+Code Quality Review
+
+Reviewer: Charles Reitz
+Review Date: 2/22/2014
+Sprint: Sprint 3
+Reviewed File:  KoopaCollisionResponder.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling:
+		-Very high cohesion, fairly low coupling.  Mostly independent of other classes: references only Koopa, Mario,
+		and the Geometry.Side enum.
+
+	Cyclomatic Complexity:
+		-Low cyclomatic complexity: no nesting of conditional logic (only 1 tier of if statements).  
+		Currently only 2 possible execution paths in RespondToCollision(), though there will be
+		more when the others are uncommented for future sprints.  Only 1 possible execution path
+		in the constructor and 2 in the RespondToCollisionWithMario();
+
+	Hypothetical Change:
+		-If the response to a collision with some other object needed to be implemented, this
+		could easily be done because all that would be needed is an additional method to handle
+		it.  The object that collided with Koopa is passed in as well as the location of the 
+		collision relative to Koopa, so all the information needed is accessible.  
+		
+		-If a collision with Koopa somehow affected the game, there would be no way to alter the
+		Level or the Game because the class has no access to either of these, as no reference
+		to either is passed in to the constructor or any method. 	

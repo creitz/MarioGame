@@ -1,0 +1,31 @@
+﻿
+Readability Code Review
+
+Reviewer: Charles Reitz
+Review Date: 2/14/2014
+Sprint: Sprint 3
+Reviewed File:  KoopaCollisionResponder.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 15
+
+What is readable:
+
+	-Every method & whole class have good spacing.
+	-RespondToCollision(Geometry.Side side, IObject obj) {}
+		 is very obvious in the logic it follows, despite multiple if-else if's
+
+
+What is not readable: 
+
+	-RespondToCollisionWithMario method, the logic is less obvious
+	-Might be better to use "this" qualifier on calling private collision methods
+	-Killing Koopa statement: 
+			
+			this.Koopa.Sprite.Dead = true; 
+		
+		is a little deep with successive dot accessors...could be clearer
+		if Koopa had a .Kill() method i.e.:
+
+			this.Koopa.Kill();
+
+		, but it is still pretty clear what is going on.  

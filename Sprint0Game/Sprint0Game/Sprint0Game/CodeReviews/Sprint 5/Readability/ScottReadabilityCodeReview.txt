@@ -1,0 +1,20 @@
+﻿
+Readability Code Review
+
+Reviewer: Scott
+Review Date: 4/1/2014
+Sprint: Sprint 5
+Reviewed File: MarioPipeAnimator.cs
+Author of file: Jeff
+Number of Mins to Review: 10
+
+What is readable:
+
+	-Constructor is very clear and consise
+	-Update is fairly easy to follow.  All logic is short so it is easy to trace
+
+What is not readable: 
+
+	-A little hard to find the diffence in the if(this.EnteringPipe) else
+	-Not sure what is entering pipe. Consider renaming to MarioEnteringPipe
+	

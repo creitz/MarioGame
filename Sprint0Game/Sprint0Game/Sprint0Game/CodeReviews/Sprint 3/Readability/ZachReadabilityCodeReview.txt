@@ -1,0 +1,19 @@
+﻿Readability Code Review
+
+Reviewer: Zach Atwood
+Review Date: 2/28/2014
+Sprint: Sprint 3
+Reviewed File:  KeyboardController.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 15
+
+What is readable:
+	- The command instantiations are more clearly defined, so as to make their function more explicit
+	- The code seems well commented. Clarifies some of the more complex parts of the code.
+
+	
+
+What is not readable: 
+	- There is a long string of namespace commands (?) before Keys on a couple occasions which could be
+	solved by a using statement. Makes the code a little unreadable.
+	- The comment "iterate through pressed..." may be unneeded as the conclusion can be drawn implicitly.

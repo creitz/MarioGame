@@ -1,0 +1,29 @@
+Code Quality Review
+
+Reviewer: Travis McDaniel
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: LevelGenerator.cs
+Author of file: Zach Atwood
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		-Small amount of coupling with the class being bound to a game object and the window dimesions. 
+		 Overall this makes sense and isn't really rectifiable.
+		-High cohesion, this class covers nearly all functions relatable to level generation and doesn't have much
+	 	 domain outside of that.
+
+	Cyclomatic Complexity:
+		-Very low cyclomatic complexity throughout the class except in a few areas where it cannot be avoided, such as DrawLevel
+		 (because we are drawing on a grid we need a minimum cyclomatic complexity if 2, which is what is used.
+		-Some amount of nested if states and if-else-if chains are used in Update, it looks as thought the first two if statements could be
+		 combined and since the logic is fairly complex, making a boolean helper class would help clean up the code.		
+
+	Hypothetical Change:
+		-If you wanted to add a new type of placeable to the level creater, it would be pretty simple due to the layout of the
+		 class and the implmentation of the buttons and drawing of the placeables. One would need to add sprites and add the 
+		 placeable type to the buttons and creatbles that are drawn. The logic for actually creating the level relies on codes 
+		 for each type, so adding a new type is just a matter of a few lines of code to the Encoder. Overall, adding new things
+		 to place in levels is a simple augmentation.

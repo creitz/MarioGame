@@ -1,0 +1,34 @@
+﻿
+Code Quality Review
+
+Reviewer: Charles Reitz
+Review Date: 4/6/2014
+Sprint: Sprint 5
+Reviewed File: Flag.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		-Pretty high cohesion.  The only thing that doesn't quite seem like it fits in the class
+		is LevelComplete.  At first glance, at least, it seems like that would belong in Level or 
+		elsewhere.
+		-It is fairly tightly coupled with its collision responder and its sprite, but that's not 
+		necessarily a bad thing.  Good organization of tasks.   
+
+	Cyclomatic Complexity:
+		-Very low cyclomatic complexity.  Only one path of execution through the constructor and all 
+		methods.  
+
+	Other Comments:
+		-Without other knowledge about its use in other classes, it's unclear what the purpose
+		of HasBeenReached is, and why it's set to true immediately in the constructor.   
+
+
+	Hypothetical Change:
+		-Flag is mostly a container class for, so it seems it would be relatively straightforward to
+		implement any change.  For example, the flag's initial velocity could easily be changed by 
+		altering the initial value in the constructor.  On the other hand, the dimensions and other 
+		similar metrics of the flag are dictated by the sprite, so those items could probably easily
+		be added to or modificed, but not directly from within this class.  

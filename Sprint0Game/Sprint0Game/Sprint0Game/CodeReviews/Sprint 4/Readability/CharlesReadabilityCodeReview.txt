@@ -1,0 +1,22 @@
+﻿
+Readability Code Review
+
+Reviewer: Charles Reitz
+Review Date: 3/16/2014
+Sprint: Sprint 4
+Reviewed File: KoopaSprite.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 15
+
+What is readable:
+
+	-Intent of constructor and setDead method is obvious.
+
+
+What is not readable: 
+
+	-fairly unclear what "count" variable represents.
+	-nested ifs is a little tough to read in Update() method.
+	-Without having knowledge of the purpose in other sprites, it's unclear why width and height are 
+	set to zero if this.Dead, but can probably be inferred.  
+	

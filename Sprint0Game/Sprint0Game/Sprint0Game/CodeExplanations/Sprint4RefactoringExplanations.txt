@@ -1,0 +1,12 @@
+﻿
+Sprint 4
+
+Changes not made to code that were suggested by running code analysis:
+
+	1)  For FireFlowerCollisionResponder it suggested to remove the
+		"side" paramter to the method call of RespondToCollision(Side, IObject) and the "intersectrect"
+		parameter for PipeCollisionResponder for the same method.  This was 
+		not done because having those parameters allows that method to be called from 
+		CollisionDetector on objects of type IObject, as this object implement this
+		method from the interface.  In order to implement the IObject interface, it 
+		must have a method with this signature.  

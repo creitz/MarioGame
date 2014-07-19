@@ -1,0 +1,27 @@
+﻿
+Code Quality Review
+
+Reviewer: Jeff Huggins
+Review Date: 4/20/2014
+Sprint: Sprint 5
+Reviewed File: MenuKeyboardController.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling:
+		- High cohesion. Has an update method that takes input from the keyboard and performs the proper 
+		  command. Also a KeyPressed method that returns whether or not a certain key has been pressed on
+		  that iteration of update.
+
+		- Tight Coupling. Knows about Menu, ICommand, and IController which are all absolutely necessary 
+		  to execute the function of this class.
+
+	Cyclomatic Complexity:
+		- At its worse it has 3 levels of nested loops but there is really no other way to get around 
+		  writing it this way. 
+
+	Hypothetical Change:
+		- There really is no change that could be made that would dramatically improve code quality or the
+		  functionality of this class. This class has a relatively simple task and it performs it very well.

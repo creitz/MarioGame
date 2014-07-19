@@ -1,0 +1,37 @@
+﻿
+Code Quality Review
+
+Reviewer: Charles Reitz
+Review Date: 3/20/2014
+Sprint: Sprint 4
+Reviewed File:  KoopaSprite.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling:
+		-Very high cohesion, pretty low coupling.  Mostly independent of other classes: references only Koopa.
+
+	Cyclomatic Complexity:
+		-Medium cyclomatic complexity: one nesting of conditional logic in Update(), though two successive ones.  
+		Currently 6 possible execution paths in Update()  Only 1 possible execution path
+		in the constructor, Draw(), and SetDead().
+
+	Other Comments:
+		-Might be better to have a method such as SetRightFacing(), SetLeftFacing(), or SwitchDirection() that changes
+			Koopa's Flip variable so it does not need to be checked on every call of Update().  This would probably need
+			to be called from Koopa.cs because Koopa's RightFacing variable is what gets assigned from other places, 
+			probably would call the new method from that setter. 
+			
+		-All the frame changing work in Update() is unnecessarily executed if Koopa's SetDead() has been called...maybe
+			nest in an if or something, though that would increase the cyclomatic complexity of the method. 
+			
+		-Position changing should probably be done in KoopaSprite's Update() instead of Koopa's Update, for consistency's
+			sake with all the other objects.    
+
+	Hypothetical Change:
+		-If the rate at which Koopa's frames were to be changed, you could easily change the number against which count is
+		compared with, though it would be better to have it not be a magic number and stored in an obvious variable.  
+
+		-Changing the speed Koopa walks cannot be done within KoopaSprite (see above).

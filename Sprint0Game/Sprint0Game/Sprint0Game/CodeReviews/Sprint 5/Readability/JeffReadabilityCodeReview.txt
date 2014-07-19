@@ -1,0 +1,21 @@
+﻿
+Readability Code Review
+
+Reviewer: Jeff Huggins
+Review Date: 4/2/2014
+Sprint: Sprint 5
+Reviewed File: HUD.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 15
+
+What is readable:
+
+	- Everything in the constructor is clear.
+	- Variable naming conventions are very good, structure of this class resembles other similar classes which is great.
+	- The branching of the draw method into sub-methods is very helpful and helps to avoid any would-be problems.
+
+
+What is not readable: 
+
+	- A little over 100 lines of code which may be a little excessive for this class.
+	

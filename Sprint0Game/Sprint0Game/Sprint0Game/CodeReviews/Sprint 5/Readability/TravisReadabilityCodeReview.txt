@@ -1,0 +1,20 @@
+Readability Code Review
+
+Reviewer: Travis McDaniel	
+Review Date: 4/2/2014
+Sprint: Sprint 5
+Reviewed File: Soundboard.cs
+Author of file: Zach Atwood
+Number of Mins to Review: 15
+
+What is readable:
+
+	-The purpose of the class as a holder of sounds for the game is fairly apparent
+	-While the code is in large chunks, the consistent formatting and spacing make reading through the list of sound effects very simple.
+	-It's very clear what the only method (LoadSounds) does
+
+
+What is not readable: 
+
+	-Large amount of fields, though necessary, is fairly daunting at first glance.
+	-The sheer amount of effects make for a lot of repeated code, making it hard to find a specific line or statement.

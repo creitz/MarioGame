@@ -1,0 +1,21 @@
+﻿
+Code Quality Review
+
+Reviewer: Scott
+Review Date: 4/1/2014
+Sprint: Sprint 5
+Reviewed File: MarioPipeAnimator.cs
+Author of file: Jeff
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		-Extremely high cohesion.  Only thing that may be a bit uncohesive is the mario on trans pipe and touching trans pipe booleans.
+		-High coupling with level however not really a bad thing due to this being a class made to help organize level.  All other coupling is low
+
+	Cyclomatic Complexity:
+		-Medium cyclomatic complexity.  4 paths in the update method.  This may be something that should be worked on    
+
+	Hypothetical Change:
+		-If we wanted to change how the pipe was animated.  This would be fairly easy to change by editing the update of the animator however if we wanted mario to maybe run out of the pipe it would be a bit harder. We may need to add an animated Mario for example.

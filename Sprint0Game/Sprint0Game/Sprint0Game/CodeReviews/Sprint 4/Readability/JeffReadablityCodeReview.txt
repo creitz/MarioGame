@@ -1,0 +1,22 @@
+﻿
+Readability Code Review
+
+Reviewer: Jeff Huggins
+Review Date: 3/17/2014
+Sprint: Sprint 4
+Reviewed File: MarioCollisionResponder.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 15
+
+What is readable:
+
+	- Very clear what is happening upon Mario contact with items based on Naming and comments.
+	- Overall, spacing is good and naming of methods/variables is very good.
+
+What is not readable: 
+
+	- ShouldTakeDamageFromProjectiles() is a little confusing when trying to break down the
+	logic of the layered boolean statement.
+	- Several of the collision responding methods contain a decent amount of branching, but
+	this is to be expected for the most part in these cases.
+	

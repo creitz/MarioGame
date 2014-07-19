@@ -1,0 +1,19 @@
+﻿
+Readability Code Review
+
+Reviewer: Jeff Huggins
+Review Date: 2/2/2014
+Sprint: Sprint 2
+Reviewed File:  JumpingMario.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 20
+
+What is readable:
+	
+	- Good spacing within and in between methods.
+	- Naming of variables is good, making it more clear what the code is doing.
+	- Fairly well commented
+
+What is not readable: 
+
+	- The amount of parameters for the constructor slightly decreases code readability

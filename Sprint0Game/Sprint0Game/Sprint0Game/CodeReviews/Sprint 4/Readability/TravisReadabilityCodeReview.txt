@@ -1,0 +1,22 @@
+Readability Code Review
+
+Reviewer: Travis McDaniel
+Review Date: 3/17/2014
+Sprint: Sprint 4
+Reviewed File: AnimatedBlock.cs
+Author of file: Zach Atwood
+Number of Mins to Review: 15
+
+What is readable:
+
+	- It's pretty clear what the variables represent, with the exception of alpha which is used for transparency
+	  isn't immediately clear in that purpose.
+	- The code is sectioned reasonably with comments before large sections of code making it easy to follow some 
+	  of the more complex logic.
+
+
+What is not readable: 
+
+	- Some of the logic in update took a couple of read-throughs to fully understand, especially involving the unit variable.
+	- Unclear on what the counter variable is used for until getting to it in the Update() where it can be seen in the logic but
+	  never explicitly explained. 

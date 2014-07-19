@@ -1,0 +1,22 @@
+﻿
+Readability Code Review
+
+Reviewer: Jeff Huggins
+Review Date: 2/14/2014
+Sprint: Sprint 3
+Reviewed File:  CollisionDetector.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 15
+
+What is readable:
+	
+	- Good spacing within and in between methods.
+	- Naming of variables is good, making it more obvious what each value represents.
+
+What is not readable: 
+
+	- Methods are pretty long, and involve several nested loops. (I know that is more
+		of a code quality thing, but it also makes it more difficult to follow along with
+		the code).
+	- Needs more comments, especially in DetectCollisions.. For example to explain why
+		it is necessary to have two instances of nested "for" loops.

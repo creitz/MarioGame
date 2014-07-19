@@ -1,0 +1,25 @@
+﻿Code Quality Review
+
+Reviewer: Zach Atwood
+Review Date: 3/20/2014
+Sprint: Sprint 4
+Reviewed File: MarioCamera.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling: High Cohesion, and low coupling. Camera really only needs to know about Mario.
+		However, a large amount of methods require knowledge of the camera
+		
+
+	Cyclomatic Complexity: Low cyclomatic complexity. The update code block is pretty straightforward
+		
+
+	Other Comments: The code is pretty straightforward and easily explainable, however there are few "magic numbers" which could be removed.
+		   
+
+	Hypothetical Change
+
+		- You could create some constants in order to clarify the magic numbers in the control for the location
+			on the screen when the camera starts to pan back and forth.

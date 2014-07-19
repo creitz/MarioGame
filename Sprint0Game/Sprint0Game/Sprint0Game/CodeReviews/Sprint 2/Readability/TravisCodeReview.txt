@@ -1,0 +1,16 @@
+Readability Code Review
+
+Reviewer: Travis McDaniel	
+Review Date: 2/3/2014
+Sprint: Sprint 2
+Reviewed File: QuestionBlockState.cs
+Author of File: Zach Atwood
+
+What is readable:
+- All methods are nice and simple to read and understand with the longest (DrawBlock) being nicely sectioned by purpose of the code.
+
+What is not readable:
+-For the most part, the code is well organized and very readable with no glaring problems
+
+Suggestions: 
+-More comments wouldn't hurt

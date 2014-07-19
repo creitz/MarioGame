@@ -1,0 +1,24 @@
+Code Quality Review
+
+Reviwer: Travis McDaniel
+Review Date: 4/7/14
+Sprint: Sprint 5
+Reviewed File: LevelCreator.cs
+Author of File: Zach Atwood
+Minutes to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		- Very high cohesion and low coupling. Only reliant on a level class which makes sense.
+
+	Cyclomatic Complexity:
+		-Large amount of nested conditionals and switch statements, mostly in the CreateObjects method. While this is necessary
+		 because it needs to read through several lines of a file to generate the level, I'd suggest making a helper method to 
+		 make it easier to read and understand from a client perspective.
+		-Large amount of case select logic, which is expected in a case by case level creator.
+	
+	Hypothetical Change:
+		-The format of the class makes it so not only can the files read to create the levels be changed easily, but also it is quite 
+		 simple to add a new object for the level to draw because all it would need is a symbol in the file and a single case in the 
+		 appropriate helper method to draw.

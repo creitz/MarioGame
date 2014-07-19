@@ -1,0 +1,21 @@
+﻿Readability Code Review
+
+Reviewer: Zach Atwood	
+Review Date: 4/7/2014
+Sprint: Sprint 5
+Reviewed File: LivesScreen.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 15
+
+What is readable:
+
+	- Variables are well named as to describe what is being manipulated
+	- There are lot of variables, but they help to restrict the use of magic numbers.
+
+
+What is not readable: 
+
+	- Spacing could be better as to make code more readable.
+
+	
+	

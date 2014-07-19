@@ -1,0 +1,26 @@
+﻿Code Quality Review
+
+Reviewer: Zach Atwood
+Review Date: 2/28/2014
+Sprint: Sprint 3
+Reviewed File:  KeyboardController.cs
+Author of file: Travis McDaniel
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion:
+		-High cohesion. The controller properly acts as a pass through for commands.
+	
+	Coupling:
+		-Higher coupling, which occurs because the keyboard needs to know about a lot since it acts as a hub to
+		pass around different commands. Coupling is reduced by use of commands.
+
+	Cyclomatic Complexity:
+		-Cyclomatic complexity is pretty good. A nested if within a for loop is the worst part of it, but doesn't
+		 add a huge amount of complexity.
+
+	Hypothetical Change:
+		-As in the previous review, I believe he could replace the for loop with a foreach to better adhere to 
+		C# code standards, and adding a using statement for keys would remove the need for the long strings of
+		. connectors for keys[].

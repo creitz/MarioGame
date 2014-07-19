@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{EC780CB5-E9C3-4A5F-BCFB-08E99477D5B0}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sprint0Game</RootNamespace>
+    <AssemblyName>Sprint0Game</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>ecb116a0-d601-4765-8b1c-5df3525ae92a</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\AnimatedBlock.cs" />
+    <Compile Include="Blocks\BlockStates\BlockStateDescriptor.cs" />
+    <Compile Include="Blocks\Block.cs" />
+    <Compile Include="Blocks\BlockCollisionResponder.cs" />
+    <Compile Include="Blocks\BlockStates\BrickBlockState.cs" />
+    <Compile Include="Blocks\BlockStates\BrickBlockWithCoinsState.cs" />
+    <Compile Include="Blocks\BlockStates\FloorBlockState.cs" />
+    <Compile Include="Blocks\BlockStates\HiddenBlockState.cs" />
+    <Compile Include="Blocks\BlockConfig.cs" />
+    <Compile Include="Blocks\BlockStates\DestroyedBlockState.cs" />
+    <Compile Include="Camera\CameraConfig.cs" />
+    <Compile Include="Camera\NonMovingCamera.cs" />
+    <Compile Include="Commands\PauseCommand.cs" />
+    <Compile Include="Commands\UpReleasedCommand.cs" />
+    <Compile Include="Enemies\Lakitu.cs" />
+    <Compile Include="Enemies\LakituCollisionResponder.cs" />
+    <Compile Include="Enemies\LakituSprite.cs" />
+    <Compile Include="Interfaces\IKeybind.cs" />
+    <Compile Include="Interfaces\ISpawner.cs" />
+    <Compile Include="Keybinder\Keybind.cs" />
+    <Compile Include="Keybinder\Keybinder.cs" />
+    <Compile Include="Keybinder\RebindCommand.cs" />
+    <Compile Include="LevelGeneration\Button.cs" />
+    <Compile Include="LevelGeneration\Creatable.cs" />
+    <Compile Include="LevelGeneration\CreatableHolder.cs" />
+    <Compile Include="LevelGeneration\GeneratorConfig.cs" />
+    <Compile Include="LevelGeneration\LevelEncoder.cs" />
+    <Compile Include="LevelGeneration\LevelGenerator.cs" />
+    <Compile Include="LevelGeneration\MouseController.cs" />
+    <Compile Include="Mario\Mario States\Dead\DeadMarioState.cs" />
+    <Compile Include="Menu\LaunchKeybindingsMenuCommand.cs" />
+    <Compile Include="Menu\LaunchMainMenuCommand.cs" />
+    <Compile Include="Projectiles\SpinyEgg.cs" />
+    <Compile Include="Projectiles\SpinyEggCollisionResponder.cs" />
+    <Compile Include="Projectiles\SpinyEggSprite.cs" />
+    <Compile Include="Spawners\EnemySpawner.cs" />
+    <Compile Include="Spawners\EnemySpawnerConfig.cs" />
+    <Compile Include="Spawners\EnemyDescriptor.cs" />
+    <Compile Include="Spawners\PowerupSpawnerConfig.cs" />
+    <Compile Include="Spawners\PowerupDescriptor.cs" />
+    <Compile Include="Spawners\PowerupSpawner.cs" />
+    <Compile Include="Enemies\FlyingKoopa.cs" />
+    <Compile Include="Enemies\FlyingKoopaCollisionResponder.cs" />
+    <Compile Include="Enemies\FlyingKoopaSprite.cs" />
+    <Compile Include="Enemies\Spiny.cs" />
+    <Compile Include="Enemies\SpinyCollisionResponder.cs" />
+    <Compile Include="Enemies\SpinySprite.cs" />
+    <Compile Include="Items\MushroomType.cs" />
+    <Compile Include="Level\LevelHordConfig.cs" />
+    <Compile Include="Level\HordLevel.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalCrouchingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalCrouchingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalFallingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalFallingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalIdleLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalIdleRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalJumpingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalJumpingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalRunningLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Metal\MetalRunningRightFacingMarioState.cs" />
+    <Compile Include="Mario\StateGeneralizer.cs" />
+    <Compile Include="Menu\ChooseMenuCommand.cs" />
+    <Compile Include="Menu\LeftMenuUnpressedCommand.cs" />
+    <Compile Include="Menu\GameQuitCommand.cs" />
+    <Compile Include="Menu\PlayHordeCommand.cs" />
+    <Compile Include="Menu\LaunchLevelCreationPageCommand.cs" />
+    <Compile Include="Menu\ToggleMusicCommand.cs" />
+    <Compile Include="Menu\PlayMenuCommand.cs" />
+    <Compile Include="Menu\RightMenuUnpressedCommand.cs" />
+    <Compile Include="Menu\RightMenuCommand.cs" />
+    <Compile Include="Menu\SelectMenuUnpressedCommand.cs" />
+    <Compile Include="Menu\LeftMenuCommand.cs" />
+    <Compile Include="Menu\MenuKeyboardController.cs" />
+    <Compile Include="Enemies\EnemyConfig.cs" />
+    <Compile Include="EndOfLevel\Castle.cs" />
+    <Compile Include="EndOfLevel\CastleSprite.cs" />
+    <Compile Include="EndOfLevel\Flag.cs" />
+    <Compile Include="EndOfLevel\FlagCollisionResponder.cs" />
+    <Compile Include="EndOfLevel\FlagSprite.cs" />
+    <Compile Include="Level\MarioPipeAnimator.cs" />
+    <Compile Include="Game\LivesScreenConfig.cs" />
+    <Compile Include="Level\LevelDrawer.cs" />
+    <Compile Include="Level\LevelUpdater.cs" />
+    <Compile Include="Game\LivesScreen.cs" />
+    <Compile Include="Level\WinLevelAnimator.cs" />
+    <Compile Include="Interfaces\IAnimatedMario.cs" />
+    <Compile Include="Items\ItemDescriptor.cs" />
+    <Compile Include="Game\GameStats.cs" />
+    <Compile Include="HUD\HUD.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\MenuConfig.cs" />
+    <Compile Include="Pipes\PipeMerge.cs" />
+    <Compile Include="Game\PointsConfig.cs" />
+    <Compile Include="Level\Level1Config.cs" />
+    <Compile Include="Game\GameConfig.cs" />
+    <Compile Include="HUD\HUDConfig.cs" />
+    <Compile Include="Interfaces\IBlockState.cs" />
+    <Compile Include="Blocks\BlockStates\QuestionBlockState.cs" />
+    <Compile Include="Blocks\BlockStates\StairBlockState.cs" />
+    <Compile Include="Blocks\BlockStates\UsedBlockState.cs" />
+    <Compile Include="Camera\Camera.cs" />
+    <Compile Include="Commands\FireballCommand.cs" />
+    <Compile Include="Interfaces\ICamera.cs" />
+    <Compile Include="Items\ItemConfig.cs" />
+    <Compile Include="Mario\MarioConfig.cs" />
+    <Compile Include="Motion\CollisionDetector.cs" />
+    <Compile Include="Commands\NoKeyCommand.cs" />
+    <Compile Include="Motion\PhysicsConfig.cs" />
+    <Compile Include="Enemies\GoombaCollisionResponder.cs" />
+    <Compile Include="Enemies\GoombaSprite.cs" />
+    <Compile Include="Enemies\KoopaCollisionResponder.cs" />
+    <Compile Include="Enemies\KoopaSprite.cs" />
+    <Compile Include="Level\LevelCreator.cs" />
+    <Compile Include="Motion\SideGeneralizer.cs" />
+    <Compile Include="Interfaces\IAnimatedSprite.cs" />
+    <Compile Include="Interfaces\IObject.cs" />
+    <Compile Include="Mario\Mario States\Responders\DeadMarioStateResponder.cs" />
+    <Compile Include="Mario\Mario States\Responders\RunningMarioStateResponder.cs" />
+    <Compile Include="Mario\Mario States\Responders\JumpingMarioStateResponder.cs" />
+    <Compile Include="Mario\Mario States\Responders\IdleMarioStateResponder.cs" />
+    <Compile Include="Mario\Mario States\Responders\CrouchingMarioStateResponder.cs" />
+    <Compile Include="Mario\Mario States\Responders\FallingMarioStateResponder.cs" />
+    <Compile Include="Interfaces\IMarioStateResponder.cs" />
+    <Compile Include="Mario\Mario States\Responders\MarioAllStateResponder.cs" />
+    <Compile Include="Items\CoinSprite.cs" />
+    <Compile Include="Items\CoinCollisionResponder.cs" />
+    <Compile Include="Items\StarCollisionResponder.cs" />
+    <Compile Include="Items\FireFlowerCollisionResponder.cs" />
+    <Compile Include="Items\MushroomCollisionResponder.cs" />
+    <Compile Include="Items\StarSprite.cs" />
+    <Compile Include="Items\FireFlowerSprite.cs" />
+    <Compile Include="Items\MushroomSprite.cs" />
+    <Compile Include="Mario\Mario Animations\FallingMario.cs" />
+    <Compile Include="Mario\Mario States\Big\BigFallingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigFallingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario Animations\AnimatedMarioFactory.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallFallingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallFallingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireFallingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireFallingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\MarioStateMgmt.cs" />
+    <Compile Include="Mario\MarioCollisionResponder.cs" />
+    <Compile Include="Commands\DownCommand.cs" />
+    <Compile Include="Commands\LeftCommand.cs" />
+    <Compile Include="Commands\RightCommand.cs" />
+    <Compile Include="Enemies\Goomba.cs" />
+    <Compile Include="Background\Background.cs" />
+    <Compile Include="Interfaces\IMario.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Items\Coin.cs" />
+    <Compile Include="Pipes\IPipe.cs" />
+    <Compile Include="Pipes\PipeBody.cs" />
+    <Compile Include="Pipes\PipeCollisionResponder.cs" />
+    <Compile Include="Pipes\PipeSprite.cs" />
+    <Compile Include="Pipes\PipeTop.cs" />
+    <Compile Include="Projectiles\ProjectileConfig.cs" />
+    <Compile Include="Projectiles\ShellCollisionResponder.cs" />
+    <Compile Include="Projectiles\FireballCollisionResponder.cs" />
+    <Compile Include="Projectiles\ShellSprite.cs" />
+    <Compile Include="Projectiles\FireballSprite.cs" />
+    <Compile Include="Interfaces\IProjectile.cs" />
+    <Compile Include="Items\FireFlower.cs" />
+    <Compile Include="Items\Mushroom.cs" />
+    <Compile Include="Items\Star.cs" />
+    <Compile Include="Enemies\Koopa.cs" />
+    <Compile Include="Interfaces\ILevel.cs" />
+    <Compile Include="Level\Level.cs" />
+    <Compile Include="Mario\Mario Animations\CrouchingMario.cs" />
+    <Compile Include="Interfaces\IEnemy.cs" />
+    <Compile Include="Mario\Mario Animations\DyingMario.cs" />
+    <Compile Include="Mario\Mario Animations\IdleMario.cs" />
+    <Compile Include="Mario\Mario Animations\JumpingMario.cs" />
+    <Compile Include="Mario\Mario States\Dead\DyingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireIdleLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireIdleRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireJumpingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireJumpingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireCrouchingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireCrouchingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireRunningLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Fire\FireRunningRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigCrouchingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigCrouchingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigJumpingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigJumpingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallCrouchingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallCrouchingRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallJumpingLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallJumpingRightFacingMarioState.cs" />
+    <Compile Include="Interfaces\IMarioState.cs" />
+    <Compile Include="Mario\Mario.cs" />
+    <Compile Include="Mario\Mario States\Big\BigRunningLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigRunningRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallRunningLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallRunningRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigIdleLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Big\BigIdleRightFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallIdleLeftFacingMarioState.cs" />
+    <Compile Include="Mario\Mario States\Small\SmallIdleRightFacingMarioState.cs" />
+    <Compile Include="Projectiles\Fireball.cs" />
+    <Compile Include="Projectiles\Shell.cs" />
+    <Compile Include="Commands\ShowMenuCommand.cs" />
+    <Compile Include="Controllers\GamePadController.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Controllers\KeyboardController.cs" />
+    <Compile Include="Interfaces\IController.cs" />
+    <Compile Include="Motion\Side.cs" />
+    <Compile Include="SoundBoard.cs" />
+    <Compile Include="SpriteHolder.cs" />
+    <Compile Include="Mario\Mario Animations\RunningMario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Game\Program.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Commands\UpCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CodeExplanations\Sprint6RefactoringExplanations.txt" />
+    <Content Include="CodeExplanations\Sprint5RefactoringExplanations.txt" />
+    <Content Include="CodeExplanations\Sprint4RefactoringExplanations.txt" />
+    <Content Include="CodeExplanations\Sprint3RefactoringExplanations.txt" />
+    <Content Include="CodeReviews\Sprint 2\Code Quality\CharlesCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Code Quality\JeffCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Code Quality\ScottsCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Code Quality\ZachCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Code Quality\TravisCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Readability\CharlesCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Readability\JeffCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Readability\ScottCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Readability\TravisCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 2\Readability\ZachCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Code Quality\CharlesCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Code Quality\JeffCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Code Quality\ScottsCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Code Quality\TravisCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Code Quality\ZachCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Readability\CharlesReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Readability\JeffReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Readability\ScottCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Readability\TravisReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 3\Readability\ZachReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Code Quality\CharlesCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Code Quality\JeffCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Code Quality\ScottCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Code Quality\TravisCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Code Quality\ZachCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Readability\CharlesReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Readability\ScottReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Readability\TravisReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 4\Readability\ZachReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Code Quality\CharlesCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Code Quality\JeffCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Code Quality\ScottCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Code Quality\TravisCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Code Quality\ZachCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Readability\CharlesReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Readability\JeffReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Readability\ScottReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Readability\TravisReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 5\Readability\ZachReadability.txt" />
+    <Content Include="CodeReviews\Sprint 6\Code Quality\CharlesCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Code Quality\JeffCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Code Quality\ScottCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Code Quality\TravisCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Code Quality\ZachCodeQualityReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Readability\CharlesReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Readability\JeffReadabilityReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Readability\ScottReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Readability\TravisReadabilityCodeReview.txt" />
+    <Content Include="CodeReviews\Sprint 6\Readability\ZachCodeReadabilityReview.txt" />
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </Content>
+    <Content Include="CodeReviews\Sprint 4\Readability\JeffReadablityCodeReview.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sprint0GameContent\Sprint0GameContent.contentproj">
+      <Name>Sprint0GameContent</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>

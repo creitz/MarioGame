@@ -1,0 +1,17 @@
+﻿
+Sprint 3
+
+Changes not made to code that were suggested by running code analysis:
+
+	1)  FireballCollisionResponder, FireFlowerCollisionResponder, 
+		GreenMushroomCollisionResponder, RedMushroomCollisionResponder, and 
+		StarCollisionResponder were all classes for which it was suggested to remove the
+		"side" paramter to the method call of RespondToCollision(Side, IObject).  This was 
+		not done because having those parameters allows that method to be called from 
+		CollisionDetector on objects of type IObject, as each of these objects implement this
+		method from the interface.  In order to implement the IObject interface, they 
+		must have a method with this signature.  
+
+
+	2) There is a warning for cyclomatic complexity in the level creator class. I believe it's unavoidable
+		since that portion of the code is bulk to deal with the parsing of the input file.

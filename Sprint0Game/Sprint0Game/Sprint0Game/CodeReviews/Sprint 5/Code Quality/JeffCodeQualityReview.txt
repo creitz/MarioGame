@@ -1,0 +1,28 @@
+﻿
+Code Quality Review
+
+Reviewer: Jeff Huggins
+Review Date: 4/7/2014
+Sprint: Sprint 5
+Reviewed File: HUD.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling:
+		- High cohesion. Everything in this class contributes to drawing the different features
+		  displayed on the screen during gameplay.
+
+		- Knows about Level, SpriteHolder, HUDConfig, and GameStats. All of which are necessary to
+		  display the necessary data required of the HUD.
+
+	Cyclomatic Complexity:
+		- Low cyclomatic complexity. One path of execution through the constructor and all of the 
+		  methods except Draw() which has two.  
+
+	Hypothetical Change:
+		- As far as quality goes, this class is very well done and serves a well-defined purpose.
+		  The only thing I would add to the class is the function of displaying the number of lives 
+		  remaining on the HUD as well. This could be easily implemented without requiring additional
+		  coupling with any more classes.

@@ -1,0 +1,22 @@
+﻿
+Code Quality Review
+
+Reviewer: Jeff Huggins
+Review Date: 3/20/2014
+Sprint: Sprint 4
+Reviewed File: MarioCollisionResponder.cs
+Author of file: Charles Reitz
+Number of Mins to Review: 20
+
+Review:
+
+	Cohesion & Coupling:
+		- High cohesion, low coupling. References only MarioActionRequest.
+
+	Cyclomatic Complexity:
+		- Cyclomatic complexity isn't too bad. The method with the most branching is RespondToCollisionWithBlockOrPipe()
+		  which has 7 possible pathways. This is also the only method with nested 'if' statements.
+
+	Hypothetical Change:
+		- Possibly move the logic for Mario bouncing off of enemies/shell to MarioActionRequest, although it would
+		  probably be less code in the long run to just keep it here... Up to you.

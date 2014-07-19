@@ -1,0 +1,30 @@
+﻿
+Code Quality Review
+
+Reviewer: Charles Reitz
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: PowerupSpawner.cs
+Author of file: Scott Ervin
+Number of Mins to Review: 15
+
+Review:
+
+	Cohesion & Coupling:
+		-Very high cohesion.  Each field makes a lot of logical sense.  
+		-It is mildly to moderately coupled with Level, and indirectly to Mario, but that's okay because
+		it is necessary and has very little code that couples them.   
+
+	Cyclomatic Complexity:
+		-Pretty low cyclomatic complexity.  Only one path of execution through the constructor and SpawnItem, 
+		and two paths through Update().  CreateSpawnItem has 6 paths of execution, but only because of a 
+		switch case, so not a big deal.  
+
+	Other Comments:
+		-Seems a little strange that there are two spawn frequencies, and that they're multiplied together
+		in the constructor.  Might make more sense to just have one frequency.  
+
+
+	Hypothetical Change:
+		-If a new item were added to powerups, only a new case in the switch would have to be added, so that
+		is good.  Simple change. 

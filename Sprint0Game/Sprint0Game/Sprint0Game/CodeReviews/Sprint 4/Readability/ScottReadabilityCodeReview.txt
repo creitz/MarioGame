@@ -1,0 +1,11 @@
+Scott Ervin
+03/17/14
+Sprint 4
+Star.cs
+Jeff
+It took 10 minutes to complete this review
+
+The seperation and spacing of the methods was very good.  
+The private variables could be grouped together separate from the public variables to improve organization.  
+The naming of methods was very descriptive and made it easy to follow the code.  
+I have no suggestions for any naming changes.

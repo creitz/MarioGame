@@ -1,0 +1,23 @@
+﻿
+Readability Code Review
+
+Reviewer: Scott
+Review Date: 4/20/2014
+Sprint: Sprint 6
+Reviewed File: FlyingKoopa.cs
+Author of file: Jeff
+Number of Mins to Review: 10
+
+What is readable:
+
+	-All naming is very good.  No question is left in the readers mind as to what a variable may mean.
+	
+	-Methods are very short and to the point.  Most are two lines or so.
+
+	-Conditional statements are not complex at all.
+
+
+What is not readable: 
+
+	-Nothing very straightforward code
+	

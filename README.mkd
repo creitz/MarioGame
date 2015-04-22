@@ -8,8 +8,12 @@ Ohio State 3902 Software Engineering Project.
 ## Contributors
 
 Jeff Huggins
+
 Scott Ervin
+
 Travis McDaniel
+
 Zach Atwood
+
 Charles Reitz
 

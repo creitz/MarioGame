@@ -3,7 +3,7 @@ Mario Game
 
 Mario Game built from scratch in Visual Studio.  
 
-Ohio State 3902 Software Engineering Project.
+Ohio State 3902 Software Engineering Project, Spring 2014.
 
 ## Contributors
 
